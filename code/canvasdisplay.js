@@ -4,7 +4,7 @@ function flipHorizontally(context, around) {
   context.scale(-1, 1);
   context.translate(-around, 0);
 }
-
+ 
 function CanvasDisplay(parent, level) {
   this.canvas = document.createElement("canvas");
   this.canvas.width = Math.min(600, level.width * scale);
@@ -60,9 +60,9 @@ CanvasDisplay.prototype.clearDisplay = function() {
   if (this.level.status == "won")
     this.cx.fillStyle = "rgb(68, 191, 255)";
   else if (this.level.status == "lost")
-    this.cx.fillStyle = "rgb(44, 136, 214)";
+    this.cx.fillStyle = "rgb(0, 0, 0)";
   else
-    this.cx.fillStyle = "rgb(52, 166, 251)";
+    this.cx.fillStyle = "rgb(205, 205, 205)";
   this.cx.fillRect(0, 0,
                    this.canvas.width, this.canvas.height);
 };
